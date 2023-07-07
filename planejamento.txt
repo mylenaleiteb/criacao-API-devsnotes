@@ -1,0 +1,27 @@
+Fazer o planejamento da API para um projetinho: uma lista de anotações dinâmica, um gestor de anotações
+
+No início, é primordial planejar o sistema:
+O que o projeto precisa fazer?
+- listar as anotações
+- visualizar o conteúdo de UMA anotação
+- inserir uma anotação nova
+- atualizar uma anotação existente
+- deletar uma anotação
+
+Qual a estrutura de dados? O que que uma anotação tem
+- local para armazenar essas anotações
+-- tem que ter um local para armazenar o id
+-- título (title)
+-- conteúdo (body)
+
+Quais os endpoints (as URL's que vamos precisar para acessar esse projeto)
+- cada uma das ações precisa ter um endpoint
+- (MÉTODO) / url (PARÂMETROS)
+- (GET) / api/notes -> (GET)/api/getall.php
+- (GET) /api/note/123 - essa é a identificação - estou lendo a anotação -> /api/get.php (id)
+- (POST)/api/note (title, body) - estamos criando uma anotação o id é criado automaticamente -> api.insert.php (title, body)
+- (PUT)/api/note/123 (title, body) -> /api/update.php (id, title, body)
+- (DELETE)/api/note/123 -> /api/delete.php (id)
+
+OBS: Não vamos usar ROTAS (URL) nesse projeto, pois a estrutura MVC não é suportada aqui. Vamos usar arquivos, portanto, teremos que 
+fazer ajustes nos endpoints.
